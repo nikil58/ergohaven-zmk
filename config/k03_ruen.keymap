@@ -27,6 +27,8 @@
             label = "ENC_HSCROLL";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+            tap-ms = <20>;
         };
 
         enc_alttab: enc_alttab {
@@ -170,7 +172,7 @@
             >;
 
             display-name = "Nav";
-            sensor-bindings = <&enc_hscroll>, <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+            sensor-bindings = <&enc_hscroll>, <&enc_alttab>;
         };
 
         sym_en {
