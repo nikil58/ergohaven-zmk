@@ -21,11 +21,11 @@
             bindings = <&msc>, <&msc>;
         };
 
-         enc_vscroll: enc_vscroll {
+        enc_vscroll: enc_vscroll {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_VSCROLL";
             #sensor-binding-cells = <0>;
-            tap-ms = <150>;
+            tap-ms = <20>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
@@ -124,8 +124,8 @@
 
             display-name = "Base";
             sensor-bindings =
-                <&enc_vscroll>,
-                <&enc_vscroll>;
+                <&encoder SCRL_DOWN SCRL_UP>,
+                <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
         ru {
@@ -139,8 +139,8 @@
             >;
 
             sensor-bindings =
-                <&enc_vscroll>,
-                <&enc_vscroll>;
+                <&encoder SCRL_DOWN SCRL_UP>,
+                <&inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
         nav {
@@ -153,7 +153,9 @@
             >;
 
             display-name = "Nav";
-            sensor-bindings = <&enc_vol>, <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+            sensor-bindings =
+                <&encoder SCRL_RIGHT SCRL_LEFT>,
+                <&inc_dec_kp LC(PLUS) LC(MINUS)>;
         };
 
         sym_en {
