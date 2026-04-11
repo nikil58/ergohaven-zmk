@@ -32,3 +32,15 @@
 &encoder_L3 {
     status = "okay";
 };
+
+&encoder_R1 { 
+    status = "disabled"; 
+};
+
+&encoder_R2 { 
+    status = "disabled"; 
+};
+
+&encoder_R3 { 
+    status = "disabled"; 
+};
