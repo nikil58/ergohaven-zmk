@@ -136,7 +136,7 @@
         alt_release: alt_release {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release>, <&kp ESC>;
+            bindings = <&macro_release>, <&kp LEFT_ALT>;
 
             label = "ALT_RELEASE";
         };
