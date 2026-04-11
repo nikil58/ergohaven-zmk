@@ -18,7 +18,6 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "ENCODER";
             #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
         };
 
         enc_vscroll: enc_vscroll {
