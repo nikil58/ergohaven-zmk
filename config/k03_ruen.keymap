@@ -35,7 +35,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_ALTTAB";
             #sensor-binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp LC(TAB)>;
+            bindings = <&kp TAB>, <&kp LS(TAB)>;
         };
 
         alt_tapdance: alt_tapdance {
