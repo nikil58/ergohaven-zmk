@@ -19,7 +19,7 @@
             label = "ENC_VSCROLL";
             #sensor-binding-cells = <0>;
             tap-ms = <20>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc MOVE_Y(-5)>, <&msc MOVE_Y(5)>;
         };
 
         enc_hscroll: enc_hscroll {
