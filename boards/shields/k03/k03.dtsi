@@ -39,7 +39,7 @@ RC(3,5)  RC(3,4)  RC(3,3)  RC(3,2)  RC(3,1)  RC(3,0)  RC(4,0)    RC(4,6)  RC(3,6
         compatible = "alps,ec11";
         a-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+        steps = <96>;
         status = "okay";
     };
 
@@ -47,7 +47,7 @@ RC(3,5)  RC(3,4)  RC(3,3)  RC(3,2)  RC(3,1)  RC(3,0)  RC(4,0)    RC(4,6)  RC(3,6
        compatible = "alps,ec11";
         a-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+        steps = <96>;
         status = "okay";
     };
 
@@ -86,6 +86,6 @@ RC(3,5)  RC(3,4)  RC(3,3)  RC(3,2)  RC(3,1)  RC(3,0)  RC(4,0)    RC(4,6)  RC(3,6
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder_L1 &encoder_R1 &encoder_L2 &encoder_R2 &encoder_L3 &encoder_R3>;
-        triggers-per-rotation = <1>;
+        triggers-per-rotation = <12>;
     };
 };
