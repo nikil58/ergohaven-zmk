@@ -183,9 +183,9 @@
         nav {
             bindings = <
 &kp F1  &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                            &kp F7           &kp F8  &kp F9  &kp F10  &kp F11      &kp F12
-&trans  &kp LA(F4)  &kp HOME      &kp UP    &kp END        &kp INS                           &kp PG_UP        &kp N7  &kp N8  &kp N9   &kp LC(F9)   &trans
-&trans  &trans      &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                           &kp PG_DN        &kp N4  &kp N5  &kp N6   &kp LS(F9)   &trans
-&trans  &trans      &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &kp C_MUTE     &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &kp LS(F10)  &trans
+&trans  &kp LA(F4)  &kp HOME      &kp UP    &kp END        &kp INS                           &kp PG_UP        &kp N7  &kp N8  &kp N9   &kp LC(F9)   &kp F8
+&trans  &trans      &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                           &kp PG_DN        &kp N4  &kp N5  &kp N6   &kp LS(F9)   &kp F7
+&trans  &trans      &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &kp C_MUTE     &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &kp LS(F10)  &kp LS(F8)
                     &trans        &trans    &trans         &trans   &trans    &kp LC(LA(T))  &mo 6            &trans  &kp N0  &trans
             >;
 
