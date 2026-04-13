@@ -18,7 +18,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_VSCROLL";
             #sensor-binding-cells = <0>;
-            tap-ms = <100>;
+            tap-ms = <150>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
 
@@ -41,7 +41,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_HSCROLL";
             #sensor-binding-cells = <0>;
-            tap-ms = <100>;
+            tap-ms = <150>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
         };
     };
@@ -133,7 +133,11 @@
         vpn_toggle: vpn_toggle {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LS(A) &kp M &kp N &kp E &kp Z &kp I &kp A &kp LS(V) &kp LS(P) &kp LS(N) &kp ENTER &kp ENTER>;
+            bindings =
+                <&kp LEFT_GUI &kp LS(A) &kp M &kp N &kp E &kp Z &kp I &kp A &kp LS(V) &kp LS(P) &kp LS(N) &kp ENTER>,
+                <&macro_wait_time 500>,
+                <&kp ENTER>;
+
             label = "VPN_TOGGLE";
         };
     };
