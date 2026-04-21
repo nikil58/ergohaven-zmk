@@ -52,6 +52,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             continue-list = <UNDERSCORE MINUS SEMICOLON BACKSLASH SINGLE_QUOTE LESS_THAN GREATER_THAN SLASH>;
         };
+
+        soft_hard: soft_hard {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SOFT_HARD";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
+        };
     };
 
     combos {
@@ -183,11 +190,11 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp GRAVE  &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                             &kp N6              &kp N7                     &kp N8               &kp N9                 &kp N0               &kp BSPC
-&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                 &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
-&kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                 &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
-&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp C_AC_BACK    &kt LEFT_ALT  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp RSHFT
-                                    &kp LGUI              &kp LALT            &kp LCTRL           &mo 3               &kp SPACE        &kp ENTER     &mo 5               &kp BACKSPACE              &kp RALT             &kp RGUI
+&kp GRAVE  &kp N1                   &kp N2                &kp N3              &kp N4              &kp N5                                             &kp N6              &kp N7               &kp N8               &kp N9                 &kp N0               &kp BSPC
+&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                                 &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_HA
+&kp TAB    &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                 &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_E
+&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I   &kp C_AC_BACK    &kt LEFT_ALT  &kp RU_CYRILLIC_TE  &soft_hard           &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_DOT           &kp RSHFT
+                                    &kp LGUI              &kp LALT            &kp LCTRL           &mo 3               &kp SPACE        &kp ENTER     &mo 5               &kp BACKSPACE        &kp RALT             &kp RGUI
             >;
 
             sensor-bindings = <&enc_vscroll>, <&enc_alttab>;
@@ -208,11 +215,11 @@
 
         nav {
             bindings = <
-&kp F1  &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                            &kp F7           &kp F8  &kp F9  &kp F10  &kp F11      &kp F12
-&trans  &kp LA(F4)  &kp HOME      &kp UP    &kp END        &kp INS                           &kp PG_UP        &kp N7  &kp N8  &kp N9   &kp LC(F9)   &kp F8
-&trans  &trans      &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                           &kp PG_DN        &kp N4  &kp N5  &kp N6   &kp LS(F9)   &kp F7
-&trans  &trans      &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &kp C_MUTE     &kp PRINTSCREEN  &kp N1  &kp N2  &kp N3   &kp LS(F10)  &kp LS(F8)
-                    &trans        &trans    &trans         &trans   &trans    &kp LC(LA(T))  &mo 6            &trans  &kp N0  &trans
+&kp F1  &kp F2      &kp F3        &kp F4    &kp F5         &kp F6                         &kp F7           &kp F8         &kp F9  &kp F10  &kp F11      &kp F12
+&trans  &kp LA(F4)  &kp HOME      &kp UP    &kp END        &kp INS                        &kp PG_UP        &kp N7         &kp N8  &kp N9   &kp LC(F9)   &kp F8
+&trans  &kp LC(F2)  &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                        &kp PG_DN        &kp N4         &kp N5  &kp N6   &kp LS(F9)   &kp F7
+&trans  &trans      &kp LC(LEFT)  &kp CAPS  &kp LC(RIGHT)  &kp DEL  &trans    &kp C_MUTE  &kp PRINTSCREEN  &kp N1         &kp N2  &kp N3   &kp LS(F10)  &kp LS(F8)
+                    &trans        &trans    &trans         &trans   &trans    &std        &mo 6            &kp LA(LC(T))  &kp N0  &trans
             >;
 
             display-name = "Nav";
@@ -221,11 +228,11 @@
 
         sym_en {
             bindings = <
-&trans  &trans             &kp AT         &kp DLLR     &kp HASH          &trans                           &trans     &trans            &kp CARET  &trans             &trans    &trans
-&trans  &kp DOUBLE_QUOTES  &kp ASTRK      &kp EQUAL    &kp AMPERSAND     &kp MINUS                        &trans     &kp LPAR          &kp COLON  &kp RPAR           &trans    &trans
-&trans  &kp SINGLE_QUOTE   &kp LESS_THAN  &kp UNDER    &kp GREATER_THAN  &kp PLUS                         &kp COMMA  &kp LBRC          &kp SEMI   &kp RBRC           &kp EXCL  &kp QUESTION
-&trans  &std               &kp TILDE      &kp PERCENT  &kp PIPE          &kp BACKSLASH  &trans    &trans  &kp SLASH  &kp LEFT_BRACKET  &kp DOT    &kp RIGHT_BRACKET  &trans    &trans
-                           &trans         &trans       &trans            &mo 6          &trans    &trans  &trans     &trans            &trans     &trans
+&trans  &trans             &kp AT         &kp DLLR   &kp HASH          &trans                       &trans     &kp TILDE         &kp CARET  &trans             &trans    &trans
+&trans  &kp DOUBLE_QUOTES  &kp ASTRK      &kp EQUAL  &kp AMPERSAND     &kp MINUS                    &trans     &kp LPAR          &kp COLON  &kp RPAR           &trans    &trans
+&trans  &kp SINGLE_QUOTE   &kp LESS_THAN  &kp UNDER  &kp GREATER_THAN  &kp PLUS                     &kp COMMA  &kp LBRC          &kp SEMI   &kp RBRC           &kp EXCL  &kp QUESTION
+&trans  &kp TILDE          &kp PERCENT    &kp PIPE   &kp BACKSLASH     &kp SLASH  &trans    &trans  &kp HASH   &kp LEFT_BRACKET  &kp DOT    &kp RIGHT_BRACKET  &trans    &trans
+                           &trans         &trans     &trans            &mo 6      &trans    &trans  &trans     &trans            &trans     &trans
             >;
 
             display-name = "Symbols";
@@ -235,11 +242,11 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans            &trans                &en AT        &en DLLR      &en HASH     &trans                           &trans                     &trans    &en CARET    &trans    &trans      &trans
-&en SINGLE_QUOTE  &kp RU_DOUBLE_QUOTES  &en LT        &kp EQUAL     &en GT       &en GRAVE                        &trans                     &en LBKT  &kp UNDER    &en RBKT  &trans      &trans
-&trans            &kp RU_BSLH           &kp LPAR      &kp MINUS     &kp RPAR     &kp PLUS                         &kp RU_PERCENT             &en LBRC  &kp RU_SEMI  &en RBRC  &kp EXCL    &kp RU_QUESTION
-&trans            &kp RU_COMMA          &kp RU_ASTRK  &kp RU_COLON  &kp RU_FSLH  &kp RU_NUMERO  &trans    &trans  &kp RU_CYRILLIC_HARD_SIGN  &en PIPE  &en TILDE    &en AMPS  &kp RU_DOT  &trans
-                                        &trans        &trans        &trans       &mo 6          &trans    &trans  &trans                     &trans    &trans       &trans
+&trans  &trans                &en AT         &en DLLR   &en HASH          &trans                          &trans         &en TILDE             &en CARET     &trans                 &trans      &trans
+&trans  &kp RU_DOUBLE_QUOTES  &kp STAR       &kp EQUAL  &en AMPERSAND     &kp MINUS                       &trans         &en LEFT_PARENTHESIS  &kp RU_COLON  &en RIGHT_PARENTHESIS  &trans      &trans
+&trans  &en SINGLE_QUOTE      &en LESS_THAN  &kp UNDER  &en GREATER_THAN  &kp PLUS                        &kp RU_COMMA   &en LBRC              &kp RU_SEMI   &en RBRC               &kp EXCL    &kp RU_QUESTION
+&trans  &en TILDE             &kp PERCENT    &en PIPE   &kp RU_BACKSLASH  &kp RU_SLASH  &trans    &trans  &kp RU_NUMERO  &en LEFT_BRACKET      &kp RU_DOT    &en RIGHT_BRACKET      &kp RU_DOT  &trans
+                              &trans         &trans     &trans            &mo 6         &trans    &trans  &trans         &trans                &trans        &trans
             >;
 
             sensor-bindings = <&enc_vol>, <&enc_vol>;
